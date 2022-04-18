@@ -1,8 +1,58 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: pink;
 }
 
 .header {
   min-height: 100vh;
-  background-image: url('../background_netflix.jpg');
+  width: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.582) 0%, rgba(0, 0, 0, 1) 100%),
+    url('../background_netflix.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.header__content {
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.header__content--title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.20rem;
+  padding: 0 2em;
+}
+
+.header__content--subtitle,
+.header__content--subsubtitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: rgba(255, 255, 255, 0.808);
+  margin-top: 1em;
+  padding: 0 2em;
+}
+
+.header__content--email {
+  width: 100%;
+  background-color: black;
 }
