@@ -1,1 +1,89 @@
-<h1>Home template</h1>
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+{% block content %}
+<header class="">
+  <div class="">
+    <h1 class="">
+      Unlimited movies, TV shows, and more.
+    </h1>
+    <h3 class="">
+      Watch anywhere. Cancel anytime.
+    </h3>
+    <h4 class="">
+      Ready to watch? Enter your email to create or restart your membership.
+    </h4>
+
+    <div class="">
+      <div class="">
+        <input type="email" name="" id="" placeholder="Email address" class="">
+        <a href='{% url "account_signup" %}' class='md:w-1/4'>
+
+          <button class="">
+            <span>
+              Get Started
+              <i></i>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="">
+  <div class="">
+    <h2 class="4">
+      Enjoy on your TV.
+    </h2>
+    <h5 class="">
+      Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+    </h5>
+  </div>
+  <div class="">
+    <img src="{% static 'tv.png' %}" class="w-8/12" alt="">
+  </div>
+</section>
+
+<section class="">
+  <div class="">
+    <img src="{% static 'mobile-0819.jpg' %}" class="w-8/12" alt="">
+  </div>
+
+  <div class="">
+    <h2 class="">
+      Download your shows to watch offline.
+    </h2>
+    <h5 class="">
+      Save your favorites easily and always have something to watch.
+    </h5>
+  </div>
+
+</section>
+
+<section class=''>
+  <div class="">
+    <h2 class="">
+      Create profiles for kids.
+    </h2>
+    <h5 class="">
+      Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+    </h5>
+  </div>
+  <div class="">
+    <img src="{% static 'netflix_kid.png' %}" class="" alt="">
+  </div>
+</section>
+<footer class="">
+  <ul class="">
+
+    <li>&copy; 2021</li>
+    <li> Made with Django and Tailwind</li>
+    <li>By OtchereDev</li>
+  </ul>
+</footer>
+{% endblock content %}
