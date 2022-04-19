@@ -56,3 +56,15 @@ body {
   width: 100%;
   background-color: black;
 }
+
+
+.navbar {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  padding: 1em 2em;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
