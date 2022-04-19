@@ -14,11 +14,11 @@
   <div>
     {% for profile in profiles %}
     <div class="profile__item">
-      <p>
-        {{ profile.username|slice:":1" }}
+      <p class="profile__item--label">
+        {{ profile.name|slice:":1"|title }}
       </p>
-      <p>
-        {{ profile.username }}
+      <p class="profile__item--name">
+        {{ profile.name|title }}
       </p>
     </div>
     {% endfor %}

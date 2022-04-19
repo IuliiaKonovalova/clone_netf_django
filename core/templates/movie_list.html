@@ -8,7 +8,14 @@
 
 {% block content %}
 <div class="main">
-  <h2>{{ profile.name }}'s Profile</h2>
+  <div class="profile__item">
+    <p class="profile__item--label">
+      {{ profile.name|slice:":1"|title }}
+    </p>
+    <p class="profile__item--name">
+      {{ profile.name|title }}
+    </p>
+  </div>
 
 
 
