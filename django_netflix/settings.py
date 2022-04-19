@@ -42,6 +42,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'django_netflix.urls'
@@ -123,7 +124,7 @@ STATICFILES_DIRS=[
     BASE_DIR/'static'
 ]
 
-# Auth stting
+
 AUTH_USER_MODEL='core.CustomUser'
 
 AUTHENTICATION_BACKENDS = [
@@ -135,7 +136,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
   
 ]
-
 SITE_ID=1
 
 
