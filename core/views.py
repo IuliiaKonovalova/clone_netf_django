@@ -55,7 +55,7 @@ class ProfileCreate(View):
 
 @method_decorator(login_required,name='dispatch')
 class WatchView(View):
-    def get(self,request,profile_id,*args, **kwargs):
+    def get(self, request, profile_id, *args, **kwargs):
         try:
             profile=Profile.objects.get(uuid=profile_id)
 

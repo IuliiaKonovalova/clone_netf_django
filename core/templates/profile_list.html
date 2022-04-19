@@ -13,14 +13,14 @@
 
   <div>
     {% for profile in profiles %}
-    <div class="profile__item">
+    <a href="{% url 'core:movie_list' profile_id=profile.uuid %}" class="profile__item">
       <p class="profile__item--label">
         {{ profile.name|slice:":1"|title }}
       </p>
       <p class="profile__item--name">
         {{ profile.name|title }}
       </p>
-    </div>
+    </a>
     {% endfor %}
 
     {% if request.user.profiles.all|length < 5 %}
