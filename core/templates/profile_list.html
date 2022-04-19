@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+{% block content %}
+<div class="main">
+
+<h2>Who's watching?</h2>
+
+  <div>
+    {% for profile in profiles %}
+    <div class="profile__item">
+      <p>
+        {{ profile.username|slice:":1" }}
+      </p>
+      <p>
+        {{ profile.username }}
+      </p>
+    </div>
+    {% endfor %}
+
+    {% comment %} {% if request.user.profiles.all|length < 5 %}
+    <div class="">
+      <a href="{% url 'core:profile_create' %}">
+
+        <button class="">
+          Add A New Profile
+        </button>
+      </a>
+    </div>
+    {% endif %} {% endcomment %}
+  </div>
+</div>
+
+{% endblock %}
