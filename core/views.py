@@ -6,6 +6,12 @@ from django.utils.decorators import method_decorator
 
 class HomeView(View):
     def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return render(
+                request,
+                'profile_list.html',
+                {'profiles': request.user.profile.all()}
+            )
         return render(request, 'home.html')
 
 
@@ -18,3 +24,5 @@ class ProfileListView(View):
             'profile_list.html',
             {'profiles': profiles}
         )
+
+
