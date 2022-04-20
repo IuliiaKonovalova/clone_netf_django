@@ -57,7 +57,7 @@ body {
   background-color: black;
 }
 
-
+/* Navbar */
 .navbar {
   background-color: transparent;
   position: fixed;
@@ -67,6 +67,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar__logo--container a img {
+  height: 3rem;
+}
+
+.navbar__btn {
+  background-color: red;
+  border-radius: 0.4em;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.navbar__btn:focus {
+  outline: none;
+}
+
+.navbar__btn:hover {
+  background-color: rgb(255, 93, 93);
 }
 
 .main {

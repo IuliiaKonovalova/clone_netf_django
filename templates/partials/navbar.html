@@ -1,8 +1,7 @@
 {% load static %}
 <nav class="navbar">
-  <div class="">
+  <div class="navbar__logo--container">
     <a href='/'>
-
       <img src="{% static 'netflix.png' %}" alt="logo" class="">
     </a>
   </div>
@@ -12,7 +11,7 @@
   <div>
     <form action="{% url 'account_logout' %}" method="post">
       {% csrf_token %}
-      <button class=''>
+      <button class="navbar__btn">
         Logout
       </button>
     </form>
@@ -21,7 +20,7 @@
   <div>
     <a href="{% url 'account_login' %}">
 
-      <button class="">
+      <button class="navbar__btn">
         Sign In
       </button>
     </a>
