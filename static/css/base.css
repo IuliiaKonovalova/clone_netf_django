@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,53 +10,7 @@
 
 body {
   background-color: pink;
-}
-
-.header {
-  min-height: 100vh;
-  width: 100%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.582) 0%, rgba(0, 0, 0, 1) 100%),
-    url('../background_netflix.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.header__content {
-  max-width: 60rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-}
-
-.header__content--title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  letter-spacing: 0.20rem;
-  padding: 0 2em;
-}
-
-.header__content--subtitle,
-.header__content--subsubtitle {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
-  color: rgba(255, 255, 255, 0.808);
-  margin-top: 1em;
-  padding: 0 2em;
-}
-
-.header__content--email {
-  width: 100%;
-  background-color: black;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Navbar */
@@ -73,9 +29,10 @@ body {
   height: 3rem;
 }
 
-.navbar__btn {
+.navbar__btn,
+.hero__btn {
   background-color: red;
-  border-radius: 0.4em;
+  border-radius: 0.2em;
   border: none;
   color: white;
   font-size: 1rem;
@@ -91,6 +48,83 @@ body {
 
 .navbar__btn:hover {
   background-color: rgb(255, 93, 93);
+}
+
+/* Hero */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.582) 0%, rgba(0, 0, 0, 1) 100%),
+    url('../background_netflix.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.header__content {
+  max-width: 60rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.header__content--title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.20rem;
+  padding: 0 2em;
+}
+
+.header__content--subtitle,
+.header__content--subsubtitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: rgba(255, 255, 255, 0.808);
+  margin-top: 1em;
+  padding: 0 2em;
+}
+
+.header__content--email {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.email__input {
+  border: 1px solid #ffffff8c;
+  border-radius: 0.2em;
+  padding: 0.5em 1em;
+  min-width: 25rem;
+  margin: 0.6em 0;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.email__input:placeholder-shown {
+  color: #022c29;
+  font-weight: 600;
+}
+
+.email__input:not(:placeholder-shown) {
+  color: #000000;
+  font-weight: 600;
+}
+
+.hero__btn {
+  font-size: 1.3rem;
+  margin-left: 0.2em;
 }
 
 .main {
