@@ -129,20 +129,31 @@ body {
 
 /* TV section */
 .tv,
-.download {
+.download,
+.kids {
   width: 100%;
   padding: 2em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-top: 1rem solid #252525;
   color: white;
   background-color: #000000;
 }
 
+.subsectiion {
+  width: 100%;
+  max-width: 70rem;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .tv__content,
-.download__content {
+.download__content,
+.kids__content {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -152,24 +163,28 @@ body {
 }
 
 .tv__content--title,
-.download__content--title {
+.download__content--title,
+.kids__content--title {
   font-size: 3rem;
   margin-bottom: 0.5em;
 }
 
 .tv__content--subtitle,
-.download__content--subtitle {
+.download__content--subtitle,
+.kids__content--subtitle {
   font-size: 1.5rem;
   font-weight: 100;
 }
 
 .tv__image,
-.download__image {
+.download__image,
+.kids__image {
   width: 50%;
 }
 
 .tv__image img,
-.download__image img {
+.download__image img,
+.kids__image img {
   width: 100%;
   display: block;
   object-fit: contain;
