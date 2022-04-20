@@ -127,6 +127,47 @@ body {
   margin-left: 0.2em;
 }
 
+/* TV section */
+.tv {
+  width: 100%;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rem solid #252525;
+  color: white;
+  background-color: #000000;
+}
+
+
+.tv__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+}
+
+.tv__content--title {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.tv__content--subtitle {
+  font-size: 1rem;
+}
+
+.tv__image {
+  width: 50%;
+}
+
+.tv__image img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
 .main {
   min-height: 100vh;
   width: 100%;
