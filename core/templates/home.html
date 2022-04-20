@@ -26,15 +26,15 @@
 
     <div class="header__content--email">
       <input type="email" name="" id="" placeholder="Email address" class="email__input">
-      <a href='{% url "account_signup" %}' class='md:w-1/4'>
+      <a href='{% url "account_signup" %}' class='hero__btn--container'>
 
         <button class="hero__btn">
           <span>
             Get Started
-            <i></i>
+          </span>
+          <img src="{% static 'images/arrow_right.svg' %}" alt="">
         </button>
       </a>
-
     </div>
   </div>
 </header>

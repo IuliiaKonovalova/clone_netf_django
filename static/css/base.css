@@ -104,7 +104,7 @@ body {
 
 .email__input {
   border: 1px solid #ffffff8c;
-  border-radius: 0.2em;
+  border-radius: 0.05em;
   padding: 0.5em 1em;
   min-width: 25rem;
   margin: 0.6em 0;
@@ -122,9 +122,25 @@ body {
   font-weight: 600;
 }
 
+.hero__btn--container {
+  text-decoration: none;
+}
+
 .hero__btn {
-  font-size: 1.3rem;
-  margin-left: 0.2em;
+  font-size: 1.25rem;
+  margin-left: 0.1em;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 0.7em 0.5em 1em;
+  border-radius: 0.05em;
+}
+
+.hero__btn img {
+  margin-left: 0.5em;
+  height: 1.5rem;
+  filter: invert(99%) sepia(0%) saturate(7500%) hue-rotate(105deg) brightness(107%) contrast(101%);
 }
 
 /* TV section */
