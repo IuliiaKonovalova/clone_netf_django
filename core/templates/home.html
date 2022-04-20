@@ -5,6 +5,10 @@
 {% block title %}
 
 {% endblock title %}
+{% block extra_js %}
+
+{% endblock extra_js %}
+
 
 {% block content %}
 
@@ -200,5 +204,28 @@
 <footer class="">
 
 </footer>
+<script>
+  // Variables for questions
+  const questions = document.querySelectorAll(".question");
 
+
+
+
+  /**
+   * Show / Hide answer for the questions
+   */
+  const showHideAnswer = function (e) {
+    const clicked = e.target.closest(".question__holder");
+    if (!clicked) {
+      return;
+    };
+    clicked.classList.toggle("show");
+
+  };
+  // Control Question/Answer functionality
+  questions.forEach((question) => {
+    question.addEventListener("click", showHideAnswer);
+  });
+
+</script>
 {% endblock content %}
