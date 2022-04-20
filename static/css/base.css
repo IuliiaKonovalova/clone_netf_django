@@ -31,7 +31,7 @@ body {
 
 .navbar__btn,
 .hero__btn {
-  background-color: red;
+  background-color: #e50914;
   border-radius: 0.2em;
   border: none;
   color: white;
@@ -90,8 +90,13 @@ body {
   font-weight: 900;
   letter-spacing: 0.1rem;
   color: rgba(255, 255, 255, 0.808);
-  margin-top: 1em;
+  margin-top: 2em;
   padding: 0 2em;
+}
+
+.header__content--subsubtitle {
+  margin-bottom: 0.9em;
+  font-weight: 100;
 }
 
 .header__content--email {
@@ -106,10 +111,11 @@ body {
   border: 1px solid #ffffff8c;
   border-radius: 0.05em;
   padding: 0.5em 1em;
-  min-width: 25rem;
-  margin: 0.6em 0;
+  min-width: 30rem;
+  margin: 0;
   background-color: #ffffff;
   font-size: 1.2rem;
+  height: 3rem;
 }
 
 .email__input:placeholder-shown {
@@ -127,6 +133,7 @@ body {
 }
 
 .hero__btn {
+  margin: 0;
   font-size: 1.25rem;
   margin-left: 0.1em;
   font-weight: 100;
@@ -135,6 +142,7 @@ body {
   justify-content: space-between;
   padding: 0.5em 0.7em 0.5em 1em;
   border-radius: 0.05em;
+  height: 3rem;
 }
 
 .hero__btn img {
@@ -156,6 +164,10 @@ body {
   border-top: 1rem solid #252525;
   color: white;
   background-color: #000000;
+}
+
+.questions__main {
+  border-bottom: 1rem solid #252525;
 }
 
 .subsectiion {
@@ -218,7 +230,7 @@ body {
 }
 
 .questions__container {
-  max-width: 40rem;
+  max-width: 50rem;
   width: 100%;
   margin: 3em auto;
 }
@@ -286,6 +298,16 @@ body {
   justify-content: center;
 }
 
+.question__email {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.question__email--title {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
 
 
 

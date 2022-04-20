@@ -201,8 +201,23 @@
       </div>
     </div>
   </div>
-  <div class="questions__btns">
-    <button class="btn main__btn--blue">More Info</button>
+  <div class="question__email">
+    <h3 class="question__email--title">
+      Ready to watch? Enter your email to create or restart your membership.
+    </h3>
+    <div class="header__content--email">
+      <input type="email" name="" id="" placeholder="Email address" class="email__input">
+      <a href='{% url "account_signup" %}' class='hero__btn--container'>
+
+        <button class="hero__btn">
+          <span>
+            Get Started
+          </span>
+          <img src="{% static 'images/arrow_right.svg' %}" alt="">
+        </button>
+      </a>
+
+    </div>
   </div>
 
 
