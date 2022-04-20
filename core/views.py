@@ -32,7 +32,6 @@ class ProfileListView(View):
 class ProfileCreate(View):
     def get(self,request,*args, **kwargs):
         form=ProfileForm()
-
         return render(
             request,
             'profile_create.html',
@@ -47,7 +46,6 @@ class ProfileCreate(View):
             if profile:
                 request.user.profile.add(profile)
                 return redirect(f'/watch/{profile.uuid}')
-
         return render(request,'profile_create.html',{
             'form':form
         })
@@ -79,3 +77,36 @@ class WatchView(View):
             )
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
+
+
+@method_decorator(login_required,name='dispatch')
+class ShowMovieDetailView(View):
+    def get(self, request, movie_id, *args, **kwargs):
+        try:
+            movie=Movie.objects.get(uuid=movie_id)
+            return render(
+                request,
+                'movie_detail.html',
+                {
+                    'movie':movie
+                }
+            )
+        except Movie.DoesNotExist:
+            return redirect('core:profile_list')
+
+
+@method_decorator(login_required,name='dispatch')
+class ShowMovieView(View):
+    def get(self, request, movie_id, *args, **kwargs):
+        try:
+            movie=Movie.objects.get(uuid=movie_id)
+            movie=movie.video.values()
+            return render(
+                request,
+                'show_movie.html',
+                {
+                    'movie':list(movie)
+                }
+            )
+        except Movie.DoesNotExist:
+            return redirect('core:profile_list')

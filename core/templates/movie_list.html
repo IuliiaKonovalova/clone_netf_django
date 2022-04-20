@@ -16,7 +16,58 @@
       {{ profile.name|title }}
     </p>
   </div>
+  <section class="">
+    <div>
+      <h2 class="">
+        {{show_case.title}}
+      </h2>
+      <p class="">
+        {{show_case.description | slice:":50"}}...
+        {% lorem 1 %}
+      </p>
+      <div class="">
+        <a href="">
 
+          <button class="">
+            <ion-icon name="play" class=""></ion-icon>
+            <span class="">
+              Play
+            </span>
+          </button>
+        </a>
+
+        <a href="">
+          <button class="">
+
+            <ion-icon name="information-circle-outline" class=""></ion-icon>
+            <span class="">
+              More Info
+            </span>
+          </button>
+
+        </a>
+
+      </div>
+    </div>
+  </section>
+  <section class="">
+    <div class="">
+      <h2 class="">
+        Popular on Netflix
+      </h2>
+      <div class="">
+        {% for movie in movies %}
+
+        <a href="{% url 'core:show_detail' movie_id=movie.uuid %}">
+          <div class="movie__flyer">
+            <img src="{{ movie.flyer.url }}" class="" alt="">
+          </div>
+          <p>{{ movie.title }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 
 
 </div>
