@@ -194,6 +194,7 @@ body {
 /*----- Question section -----*/
 .questions__container {
   max-width: 40rem;
+  width: 100%;
   margin: 3em auto;
 }
 
@@ -224,14 +225,15 @@ body {
 
 .question__arrow {
   width: 1.5rem;
-  background-image: url('../images/icon-arrow-down.svg');
+  background-image: url('../images/plus_open.svg');
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 1.5em;
+  color: #ffffff;
 }
 
 .question__holder.show .question__arrow {
-  background-image: url('../images/icon-arrow-up.svg');
+  background-image: url('../images/plus_close.svg');
   transform: rotate(180deg);
 }
 
