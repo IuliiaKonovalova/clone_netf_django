@@ -128,9 +128,10 @@ body {
 }
 
 /* TV section */
-.tv {
+.tv,
+.download {
   width: 100%;
-  padding: 0 2em;
+  padding: 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,7 +141,8 @@ body {
 }
 
 
-.tv__content {
+.tv__content,
+.download__content {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -149,20 +151,25 @@ body {
 
 }
 
-.tv__content--title {
+.tv__content--title,
+.download__content--title {
   font-size: 3rem;
   margin-bottom: 0.5em;
 }
 
-.tv__content--subtitle {
-  font-size: 1rem;
+.tv__content--subtitle,
+.download__content--subtitle {
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 
-.tv__image {
+.tv__image,
+.download__image {
   width: 50%;
 }
 
-.tv__image img {
+.tv__image img,
+.download__image img {
   width: 100%;
   display: block;
   object-fit: contain;
